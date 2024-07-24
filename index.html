@@ -7,57 +7,46 @@
     <title>LifeLine</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
-    <header class="bg-white-50 py-5">
-        <div class="container mx-auto px-6">
-            <nav class="flex flex-wrap items-center justify-between">
-                <div class="flex flex-wrap">
-                    <img class="h-10 w-10 -mt-1" src="images/LifeLine_logo-removebg-preview.png" alt="LifeLine logo">
+    <!-- HEADER -->
+    <header class="bg-white fixed top-0 w-full py-3" style="z-index: 1000;">
+        <div class="container mx-auto px-6 sm:px-2 md:px-6">
+            <nav class="flex items-center justify-between">
+                <div class="flex flex-wrap mt-2">
+                    <img class="h-10 w-10 -mt-1" src="images/logo.png" alt="LifeLine logo">
                     <a href="#" class="text-2xl font-bold text-[#40322E]">LifeLine</a>
                 </div>
                 <div class="flex lg:hidden">
                     <button type="button" id="openMenuButton"
                         class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Open main menu</span>
-                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-                            aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        <svg width="46" height="26" viewBox="0 0 46 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3 2H44" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M14 13L44 13" stroke="black" stroke-width="3" stroke-linecap="round"/>
+                            <path d="M29 24L44 24" stroke="black" stroke-width="3" stroke-linecap="round"/>
                         </svg>
+
                     </button>
                 </div>
-                <ul class="hidden lg:flex lg:gap-x-12 flex-wrap space-x-10">
+                <ul class="hidden lg:flex space-x-10 lg:ml-200">
                     <li><a href="#" class="text-yellow-500 font-semibold border-b-2 border-yellow-500 text-bold">Home</a></li>
                     <li><a href="#" class="text-gray-500 font-semibold hover:text-yellow-500">Patients</a></li>
                     <li><a href="#" class="text-gray-500 font-semibold hover:text-yellow-500">Pharmacy</a></li>
                     <li><a href="#" class="text-gray-500 font-semibold hover:text-yellow-500">Insurance</a></li>
                 </ul>
-                <div class="hidden lg:flex space-x-4 mt-4 md:mt-0">
-                    <button class="bg-gray-900 text-white px-4 py-2 rounded-md">iOS</button>
-                    <button class="bg-gray-300 text-black px-4 py-2 rounded-md">Android</button>
+                <div class="hidden lg:flex space-x-4 mt-4 md:mt-0 os-btns">
+                    <button class="primary-btn font-bold">iOS</button>
+                    <button class="secondary-btn font-bold">Android</button>
+                    <!--<button class="bg-gray-900 text-white px-4 py-2 rounded-md ">iOS</button>
+                    <button class="bg-gray-300 text-black px-4 py-2 rounded-md">Android</button>-->
                 </div>
             </nav>
-            <div class = "grid grid-cols-3 gap-3">
-                <div class="text-center mt-10">
-                    <div style="position: absolute">
-                        <h1 class="text-3xl md:text-6xl text-left text-[#40322E]">When the cost of care</h1>
-                        <h1 class="text-3xl md:text-6xl text-left text-[#40322E]">feels impossible,</h1>
-                        <h1 class="text-3xl md:text-6xl text-left text-[#40322E]">we are your</h1>
-                        <h1 class="text-3xl md:text-6xl text-left text-yellow-500">LifeLine.</h1>
-                        <img class="w-40 h-40 mt-40" src="images/WhatsApp Image 2024-07-19 at 12.05.51_c4181fc8.jpg" alt="App Mockup">
-                    </div>
-                </div>
-                <div class="flex justify-center mt-40">
-                    <img class="w-50 h-50" src="images/WhatsApp Image 2024-07-19 at 12.05.46_d4610a85.jpg" alt="App Mockup">
-                </div>
-                <div>
-                    <img class="w-50 h-40 mt-10 ml-40 rounded-md" src="images/WhatsApp Image 2024-07-19 at 12.05.51_20fb81d2.jpg" alt="Pharmacist">
-                </div>
-                </div>
         </div>
+
         <!-- Mobile menu, show/hide based on menu open state. -->
         <div id="mobileMenu" class="mobile-menu lg:hidden" role="dialog" aria-modal="true">
             <div class="fixed inset-0 z-10"></div>
@@ -66,7 +55,7 @@
                 <div class="flex items-center justify-between">
                     <a href="#" class="-m-1.5 p-1.5">
                         <span class="sr-only">LifeLine</span>
-                        <img class="h-auto w-10" src="images/LifeLine_logo-removebg-preview.png" alt="LifeLine logo">
+                        <img class="h-auto w-10" src="images/logo.png" alt="LifeLine logo">
                     </a>
                     <button type="button" id="closeMenuButton" class="-m-2.5 rounded-md p-2.5 text-gray-700">
                         <span class="sr-only">Close menu</span>
@@ -97,94 +86,126 @@
             </div>
         </div>
     </header>
+    <!-- HEADER END -->
+
+    <!-- HERO SECTION -->
+    <div class="bg-white-50 mt-10 px-10">
+        <div class="container mx-auto lg:px-6">
+            <div class="grid grid-cols-3 gap-3 mt-20">
+                <div class="text-center">
+                    <div class="absolute" style="z-index: 1; font-weight: 500;">
+                        <h1 class="text-3xl md:text-6xl text-left text-[#40322E]">When the cost of care</h1>
+                        <h1 class="text-3xl md:text-6xl text-left text-[#40322E]">feels impossible,</h1>
+                        <h1 class="text-3xl md:text-6xl text-left text-[#40322E]">we are your</h1>
+                        <h1 class="text-3xl md:text-6xl text-left text-yellow-500">LifeLine.</h1>
+                        <!--<img class="w-40 h-40 mt-40" src="images/WhatsApp Image 2024-07-19 at 12.05.51_c4181fc8.jpg" alt="App Mockup">-->
+                    </div>
+                </div>
+                <div class="flex justify-center mt-40">
+                    <img class="w-50 h-50" src="images/hero_mockup.png" alt="App Mockup">
+                </div>
+                <div>
+                    <img class="w-50 h-40 mt-10 ml-40 rounded-md" src="images/WhatsApp Image 2024-07-19 at 12.05.51_20fb81d2.jpg" alt="Pharmacist">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HERO SECTION END -->
+
+    <!--Still working here-->
+    <!--<div class="container mx-auto px-4 py-16 text-center">
+        <div class="lg:flex text-center">
+            <div>
+                <p class="text-lg mb-4 text-left">
+                    At Lifeline, we're not just building an app but transforming healthcare access. Our innovative technology
+                    connects patients directly with pharmacies with their essential medications in stock. We're bridging gaps,
+                    reducing stress, and empowering individuals to take charge of their health across Africa.
+                </p>
+                <div class="flex justify-center space-x-4 mb-8">
+                    <a href="#" class="flex items-center justify-center px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700">
+                        <img src="path-to-ios-logo.png" alt="iOS" class="w-6 h-6 mr-2">
+                        Download for iOS
+                    </a>
+                    <a href="#" class="flex items-center justify-center px-4 py-2 bg-green-600 rounded-full hover:bg-green-700">
+                        <img src="path-to-android-logo.png" alt="Android" class="w-6 h-6 mr-2">
+                        Download Android
+                    </a>
+                </div>
+            </div>
+            <div class="relative">
+                <img src="images/WhatsApp Image 2024-07-19 at 12.05.46_d4610a85.jpg" alt="Phone" class="mx-auto" style="max-height: 400px;">
+            </div>
+        </div>
+        <h1 class="text-9xl font-bold mt-8">LifeLine</h1>
+    </div>-->
 
 
     <footer>
-        <div class="bg-[#40322f] py-4 text-gray-400 p-5">
-            <div class="container px-4 mx-auto">
-                <div class="-mx-4 flex flex-wrap justify-between">
-                <div class="px-4 my-4 w-full xl:w-1/5">
+        <div class="bg-gray-100 p-5">
+            <div class="max-w-screen-lg sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
+                <div class="py-5 px-1">
                     <div class="flex flex-wrap items-center">
-                        <img class="h-auto w-10" src="images/LifeLine_logo-removebg-preview.png" alt="LifeLine logo">
-                        <a href="#" class="text-2xl font-bold text-white">LifeLine</a>
+                        <img class="h-auto w-10" src="images/logo.png" alt="LifeLine logo">
+                        <a href="/" class="text-2xl font-bold text-[#40322E]">LifeLine</a>
                     </div>
-                    <p class="">
-                        LifeLine is an application that aims to ensure affordable access to essential medications for all. Through innovative solutions and strategic partnerships,
-                        we strive to make quality healthcare affordable.
+                    <p class="mt-8">
+                        LifeLine aims to ensure affordable access to essential medications for all.
                     </p>
                 </div>
-
-                <div class="px-4 my-4 w-full sm:w-auto">
-                    <div>
-                    <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white">Support</h2>
-                    </div>
-                    <ul class="leading-8">
-                    <li><a href="#" class="hover:text-white">About Us</a></li>
-                    <li><a href="#" class="hover:text-white">Terms & Conditions</a></li>
-                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-white">Contact Us</a></li>
-                    </ul>
+                <div class="p-5">
+                    <div class="text-sm uppercase text-[#40322E] font-bold">Resources</div>
+                    <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a>
+                    <a class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a>
+                    <a class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
+                    <a class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
                 </div>
-                <div class="px-4 my-4 w-full sm:w-auto">
-                    <div>
-                        <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white">Contact</h2>
-                    </div>
-                    <ul class="leading-8">
-                        <li><a href="#" class="hover:text-white"></a></li>
-                        <li><a href="mailto:contact@lifelineafrica.com" class="hover:text-white">contact@lifelineafrica.com</a></li>
-                        <li><a href="#" class="hover:text-white">+250792525545</a></li>
-                        <li><a href="#" class="hover:text-white">+2349046524698</a></li>
-                    </ul>
+                <div class="p-5">
+                    <div class="text-sm uppercase text-[#40322E] font-bold">Support</div>
+                    <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a
+                        class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a
+                        class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
                 </div>
-                <div class="px-4 my-4 w-full sm:w-auto xl:w-1/5">
-                    <div>
-                        <h2 class="inline-block text-2xl pb-4 mb-4 border-b-4 border-white">Connect With Us</h2>
-                    </div>
-                    <a href="#"
-                        class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-white hover:border-white">
+                <div class="p-5">
+                    <div class="text-sm uppercase text-[#40322E] font-bold">Contact us</div>
+                    <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA
+                        <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">contact@company.com
+                        <span class="text-teal-600 text-xs p-1"></span></a>
+                </div>
+            </div>
+        </div>
+        <div class="bg-gray-100 pt-2">
+            <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col
+            max-w-screen-lg items-center">
+                <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
+                    <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-[#40322E] rounded-full mr-1 hover:text-white hover:border-black hover:bg-[#40322E]">
                         <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <path
                                 d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
                             </path>
                         </svg>
                     </a>
-                    <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-white hover:border-white">
+                    <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-[#40322E] rounded-full mr-1 hover:text-white hover:border-black hover:bg-[#40322E]">
                         <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"></path>
                         </svg>
                     </a>
-                    <a href="#"
-                        class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-white hover:border-white">
+                    <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-[#40322E] rounded-full mr-1 hover:text-white hover:border-black hover:bg-[#40322E]">
                         <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                             <path
                                 d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
                             </path>
                         </svg>
                     </a>
-                    <a href="#" class="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full hover:text-white hover:border-white">
+                    <a href="#"class="inline-flex items-center justify-center h-8 w-8 border border-[#40322E] rounded-full mr-1 hover:text-white hover:border-black hover:bg-[#40322E]" >
                         <svg class="w-4 h-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
                             <path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
                         </svg>
                     </a>
                 </div>
-                </div>
-            </div>
-        </div>
-        <div class="bg-gray-200 py-4 text-gray-100">
-            <div class="container mx-auto px-4">
-                <div class="-mx-4 flex flex-wrap justify-between">
-                    <div class="px-4 w-full text-center sm:w-auto sm:text-left text-[#40322f]">
-                        Copyright &copy;
-                        <script>new Date().getFullYear()</script>
-                        LifeLine. All Rights Reserved.
-                    </div>
-                    <!--<div class="px-4 w-full text-center sm:w-auto sm:text-left">
-                    </div>-->
-                </div>
+                <div class="my-5">© Copyright 2020. All Rights Reserved.</div>
             </div>
         </div>
     </footer>
-
     <script src="./script.js"></script>
 </body>
 

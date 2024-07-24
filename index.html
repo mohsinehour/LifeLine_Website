@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +9,6 @@
     <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-
 <body>
     <!-- HEADER -->
     <header class="bg-white fixed top-0 w-full py-3" style="z-index: 1000;">
@@ -112,16 +110,16 @@
     </div>
     <!-- HERO SECTION END -->
 
-    <!--Still working here-->
-    <!--<div class="container mx-auto px-4 py-16 text-center">
+    <!--Still working here
+    <div class="container mx-auto px-5 py-16 text-center">
         <div class="lg:flex text-center">
-            <div>
-                <p class="text-lg mb-4 text-left">
+            <div class="max-w-100 platform-type-text-parent">
+                <p class="text-lg mb-4 text-left platform-type-text">
                     At Lifeline, we're not just building an app but transforming healthcare access. Our innovative technology
                     connects patients directly with pharmacies with their essential medications in stock. We're bridging gaps,
                     reducing stress, and empowering individuals to take charge of their health across Africa.
                 </p>
-                <div class="flex justify-center space-x-4 mb-8">
+                <div class="flex space-x-4 mb-8">
                     <a href="#" class="flex items-center justify-center px-4 py-2 bg-blue-600 rounded-full hover:bg-blue-700">
                         <img src="path-to-ios-logo.png" alt="iOS" class="w-6 h-6 mr-2">
                         Download for iOS
@@ -133,12 +131,59 @@
                 </div>
             </div>
             <div class="relative">
-                <img src="images/WhatsApp Image 2024-07-19 at 12.05.46_d4610a85.jpg" alt="Phone" class="mx-auto" style="max-height: 400px;">
+                <img class="mockup-image" src="images/ios_mockup.png" alt="Phone" class="mx-auto">
             </div>
         </div>
         <h1 class="text-9xl font-bold mt-8">LifeLine</h1>
     </div>-->
-
+    <section class="bg-[#1f1f1f] text-white pb-10">
+        <div class="container mx-auto text-center p-8 lg:flex items-center justify-center">
+            <div class="new-mockup-image-text-body">
+                <div class="mb-8 new-mockup-image-text">
+                    <p class="text-lg md:text-xl">
+                        At Lifeline, we're not just building an app but transforming healthcare access. Our innovative
+                        technology connects patients directly with pharmacies with their essential medications in stock. We’re
+                        bridging gaps, reducing stress, and empowering individuals to take charge of their health across Africa.
+                    </p>
+                </div>
+                <div class="flex space-x-4 mb-8">
+                    <a
+                        class="flex lg:gap-3 items-center bg-blue-500 text-white py-4 px-4 rounded-full cursor-pointer"
+                        onclick="ToggleIOSMockup()"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-apple"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
+                            <path
+                                d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516s1.52.087 2.475-1.258.762-2.391.728-2.43m3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422s1.675-2.789 1.698-2.854-.597-.79-1.254-1.157a3.7 3.7 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56s.625 1.924 1.273 2.796c.576.984 1.34 1.667 1.659 1.899s1.219.386 1.843.067c.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758q.52-1.185.473-1.282" />
+                        </svg>
+                        Download for iOS
+                    </a>
+                    <a
+                        class="flex lg:gap-3 items-center bg-green-500 text-white py-2 px-4 rounded-full cursor-pointer"
+                        onclick="ToggleAndroidMockup()"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-google-play"
+                            viewBox="0 0 16 16">
+                            <path
+                                d="M14.222 9.374c1.037-.61 1.037-2.137 0-2.748L11.528 5.04 8.32 8l3.207 2.96zm-3.595 2.116L7.583 8.68 1.03 14.73c.201 1.029 1.36 1.61 2.303 1.055zM1 13.396V2.603L6.846 8zM1.03 1.27l6.553 6.05 3.044-2.81L3.333.215C2.39-.341 1.231.24 1.03 1.27" />
+                        </svg>
+                        Download Android
+                    </a>
+                </div>
+            </div>
+            <div
+                class="mb-8 text-center justify-center"
+            >
+                <img src="images/ios_mockup.png" id="platform-mockup-image" alt="Phone Image" class="mx-auto w-96 new-mockup-image">
+            </div>
+        </div>
+        <h1 class="relative text-6xl md:text-8xl font-bold text-center">
+            LifeLine
+            <span class="absolute text-2xl">&copy;</span>
+        </h1>
+    </section>
 
     <footer>
         <div class="bg-gray-100 p-5">
@@ -153,22 +198,22 @@
                     </p>
                 </div>
                 <div class="p-5">
-                    <div class="text-sm uppercase text-[#40322E] font-bold">Resources</div>
-                    <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a>
-                    <a class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a>
-                    <a class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
+                    <div class="text-sm uppercase text-[#40322E] font-bold">Products</div>
+                    <a class="my-3 block" href="/#">Pharmacy App <span class="text-teal-600 text-xs p-1"></span></a>
+                    <a class="my-3 block" href="/#">Patients App <span class="text-teal-600 text-xs p-1"></span></a>
+                    <a class="my-3 block" href="/#">LifeLine Insurance <span class="text-teal-600 text-xs p-1"></span></a>
                     <a class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
                 </div>
                 <div class="p-5">
                     <div class="text-sm uppercase text-[#40322E] font-bold">Support</div>
                     <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a
                         class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a><a
-                        class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
+                        class="my-3 block" href="/#">Terms & Conditions <span class="text-teal-600 text-xs p-1"></span></a>
                 </div>
                 <div class="p-5">
                     <div class="text-sm uppercase text-[#40322E] font-bold">Contact us</div>
-                    <a class="my-3 block" href="/#">XXX XXXX, Floor 4 San Francisco, CA
-                        <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">contact@company.com
+                    <a class="my-3 block" href="/#">Nyarugenge Plaza Kigali, Rwanda
+                        <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">contact@lifelineafrica.com
                         <span class="text-teal-600 text-xs p-1"></span></a>
                 </div>
             </div>
@@ -202,11 +247,10 @@
                         </svg>
                     </a>
                 </div>
-                <div class="my-5">© Copyright 2020. All Rights Reserved.</div>
+                <div class="my-5">&copy; Copyright 2024. All Rights Reserved.</div>
             </div>
         </div>
     </footer>
     <script src="./script.js"></script>
 </body>
-
 </html>

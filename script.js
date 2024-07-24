@@ -26,3 +26,15 @@ document.getElementById('closeMenuButton').addEventListener('click', () => {
 
 // Call the function initially in case the page loads on a large screen
 checkScreenSize();
+
+
+// Toggle for ios/android app images
+platformMockupImage = document.getElementById("platform-mockup-image")
+
+const ToggleIOSMockup = () => {
+    platformMockupImage.src = "images/ios_mockup.png"
+}
+
+const ToggleAndroidMockup = () => {
+    platformMockupImage.src = "images/android_mockup.png"
+}
